@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidehi Khatri, Attorney at Law</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #372004;
+            --secondary-color: #001f3f;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: center/cover;
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            background-image: url("law4.png");
+            background-size: cover;
+            background-position: center;
+            /* margin-right: 50px; */
+
+        }
+
+        .header-content {
+            transform: translateY(50px);
+            opacity: 0;
+            animation: headerSlide 1s forwards 0.5s;
+        }
+
+        nav {
+            background: linear-gradient(135deg, var(--secondary-color) 30%, var(--primary-color) 100%) !important;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.95) !important;
+            padding: 0.2rem 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.95) !important;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffcc00 !important;
+            transform: translateY(-3px);
+        }
+
+        .nav-item {
+            animation: navEntrance 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .navbar-nav .nav-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .navbar-nav .nav-item:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .navbar-nav .nav-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .navbar-nav .nav-item:nth-child(4) {
+            animation-delay: 0.5s;
+        }
+
+        .navbar-nav .nav-item:nth-child(5) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes navEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 2rem auto;
+            padding: 2.5rem;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        section:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(10px);
+        }
+
+
+        h1 {
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 3px 3px 3px#000000;
+        }
+
+        .text {
+            color: rgb(97, 36, 0);
+            font-family: 'Times New Roman', Times, serif;
+            text-transform: bold;
+            text-shadow: 4px 4px 4px#000000;
+
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .btn-custom {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+        }
+
+        .service-item {
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            position: relative;
+        }
+
+        @keyframes headerSlide {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            height: 150px;
+            width: 80px;
+            transition: all 0.3s;
+        }
+
+        .contact-info p {
+            padding: 10px;
+            border-left: 3px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        .contact-info p:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container text-center position-relative">
+            <!-- <img src="law.webp" alt="Logo" class="logo mb-4 animate__animated animate__fadeInDown"> -->
+            <div class="header-content">
+                <h1 class="display-3 fw-bold text-uppercase mb-3 animate__animated animate__fadeInUp">Vaidehi Khatri
+                </h1>
+                <p class="lead fs-3 animate__animated animate__fadeInUp animate__delay-1s text">ADVOCATE & LEGAL
+                    CONSULTANT</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="law.webp" alt="Logo" class="logo" id="nav-logo"
+                    style="height: 60px; transition: transform 0.4s ease-in-out; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                <span class="ms-2 fs-4 fw-bold" style="color: white;">Vaidehi Khatri</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section id="about" class="animate__animated" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p class="fs-5">With over a decade of legal expertise, I am committed to delivering exceptional legal
+                solutions in corporate law, criminal defense, and civil litigation. My practice is built on integrity,
+                precision, and a client-first approach.</p>
+            <a href="#contact" class="btn btn-custom">Schedule Consultation</a>
+        </section>
+
+        <section id="services" data-aos="fade-up" data-aos-delay="200">
+            <h2>Legal Services</h2>
+            <div class="row">
+                <div class="col-md-6 service-item" data-aos="zoom-in">
+                    <h4>Corporate Law</h4>
+                    <p>Comprehensive legal solutions for businesses and corporations</p>
+                </div>
+                <div class="col-md-6 service-item" data-aos="zoom-in" data-aos-delay="100">
+                    <h4>Criminal Defense</h4>
+                    <p>Aggressive defense strategies for criminal charges</p>
+                </div>
+                <div class="col-md-6 service-item" data-aos="zoom-in" data-aos-delay="200">
+                    <h4>Civil Litigation</h4>
+                    <p>Expert representation in civil disputes</p>
+                </div>
+                <div class="col-md-6 service-item" data-aos="zoom-in" data-aos-delay="300">
+                    <h4>Contract Law</h4>
+                    <p>Drafting, review, and negotiation of legal agreements</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">3+ Years Experience</h5>
+                            <p class="card-text">Practicing in various fields of law</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">50+ Cases Handled</h5>
+                            <p class="card-text">Successful case resolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">98% Success Rate</h5>
+                            <p class="card-text">In favorable settlements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" data-aos="fade-up">
+            <h2>Client Testimonials</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="flip-left">
+                    <blockquote class="bg-light p-4 rounded">
+                        "Vaidehi's expertise guided us through complex corporate regulations with exceptional results."
+                        <footer class="mt-2 text-primary">- Raman Vasava</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <blockquote class="bg-light p-4 rounded">
+                        "Outstanding defense strategy that protected my rights effectively."
+                        <footer class="mt-2 text-primary">- Jobin George</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <div class="row contact-info">
+                <div class="col-md-4" data-aos="fade-right">
+                    <p class="fs-5">
+                        <i class="bi bi-geo-alt-fill me-2"></i>
+                        285 Bank Street Nani Bedwan Narmada Gujarat 393041
+                    </p>
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+                    <p class="fs-5">
+                        <i class="bi bi-envelope-fill me-2"></i>
+                        vaidehi.ias@gmail.com
+                    </p>
+                </div>
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+                    <p class="fs-5">
+                        <i class="bi bi-phone-fill me-2"></i>
+                        Contact us
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Vaidehi Khatri. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120,
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                document.querySelector('nav').classList.add('scrolled');
+            } else {
+                document.querySelector('nav').classList.remove('scrolled');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
